@@ -1,0 +1,36 @@
+<configure
+   xmlns="http://namespaces.zope.org/zope"
+   xmlns:browser="http://namespaces.zope.org/browser"
+   xmlns:i18n="http://namespaces.zope.org/i18n"
+   xmlns:zojax="http://namespaces.zope.org/zojax">
+
+  <i18n:registerTranslations directory="locales" />
+
+  <zojax:resourcedirectory
+     name="jquery.fancybox"
+     mapping=".css:zrt"
+     directory="resources" />
+
+  <zojax:resourceinclude
+     name="jquery.fancybox.css"
+     library="jquery-plugins"
+     type="stylesheet"
+     path="jquery.fancybox/jquery.fancybox-1.3.4.css"
+     filetype="zrt" />
+
+  <zojax:resourceinclude
+     name="jquery.fancybox.js"
+     library="jquery-plugins"
+     require="jquery"
+     type="javascript"
+     compression="yes"
+     path="jquery.fancybox/jquery.fancybox-1.3.4.pack.js" />
+
+  <zojax:resourceinclude
+     name="initfancybox.js"
+     library="jquery-plugins"
+     require="jquery"
+     type="javascript"
+     path="jquery.fancybox/initfancybox.js" />
+
+</configure>
